@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Cart</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="./cartcss.css" >
+</head>
+<body>
+    <div class="container px-3 my-5 clearfix">
+        <!-- Shopping cart table -->
+        <div class="card">
+            <div class="card-header">
+                <h2>Cart</h2>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table  m-0"><!--table-bordered giua table va m-0-->
+                    <thead>
+                      <tr>
+                        <!-- Set columns width -->
+                        <th class="text-left  py-3 px-4" style="min-width: 400px;">Product </th>
+                        <th class="text-right py-3 px-4" style="width: 100px;">Price</th>
+                        <th class="text-center py-3 px-4" style="width: 120px;">Quantity</th>
+                        <th class="text-right py-3 px-4" style="width: 100px;">Total</th>
+                        <th class="text-center align-middle py-3 px-0" style="width: 40px;"><a href="#" class="shop-tooltip float-none text-light" title="" data-original-title="Clear cart"><i class="ino ion-md-trash"></i></a></th>
+                      </tr>
+                    </thead>
+                    <tbody id="myproduct">
+                      <tr id="productx1">
+                        <td class="p-4">
+                          <div class="media align-items-center">
+                            <img src="./img/1.jpg" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                            <div class="media-body">
+                              <a href="#" class="d-block text-dark" style="text-decoration: none;">Stylist Baby Shoes</a>
+                              <small>
+                                <span class="text-muted">Color:</span>
+                                <span class="ui-product-color ui-product-color-sm align-text-bottom" style="background:#e78a51;"></span> &nbsp;
+                                <span class="text-muted">Size: </span> EU 37 &nbsp;
+                                <span class="text-muted">Ships from: </span> China
+                              </small>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="fprice text-right font-weight-semibold align-middle p-4">56.00</td>
+                        <td class="align-middle p-4 text-center">
+                          <input type="number" class="quantity" name="quantity" min="1" max="99" value="1" data-product-id="1">
+                          <input type="hidden" class="price" name="price" value="56">
+                        </td>
+                        <td class="totalx1 total text-right font-weight-semibold align-middle p-4" data-total-id="1">56.00</td>
+                        <td class="remove1 text-center align-middle px-0"><a id="x1" href="#" class="shop-tooltip close float-none text-danger" title="" data-product-remove="remove1">×</a></td>
+                      </tr>
+            
+                      <tr id="productx2">
+                        <td class="p-4">
+                          <div class="media align-items-center">
+                            <img src="./img/2.jpg" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                            <div class="media-body">
+                              <a href="#" class="d-block text-dark" style="text-decoration: none;">Unisex Fully solid Hoodie</a>
+                              <small>
+                                <span class="text-muted">Color:</span>
+                                <span class="ui-product-color ui-product-color-sm align-text-bottom" style="background:#177ecd;"></span> &nbsp;
+                                <span class="text-muted">Storage: </span> 32GB &nbsp;
+                                <span class="text-muted">Warranty: </span> Standard - 1 year &nbsp;
+                                <span class="text-muted">Ships from: </span> China
+                              </small>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="fprice text-right font-weight-semibold align-middle p-4">75.00</td>
+                        <td class="align-middle p-4 text-center">
+                          <input type="number" class="quantity" name="quantity" min="1" max="99" value="1" data-product-id="2" abc="dsdsada">
+                          <input type="hidden" class="price" name="price" value="75">
+                        </td>
+                        <td class="totalx2 total text-right font-weight-semibold align-middle p-4" data-total-id="2">75.00</td>
+                        <td class="remove2 text-center align-middle px-0"><a href="#" id="x2" class="shop-tooltip close float-none text-danger" title="" data-product-remove="remove2">×</a></td>
+                      </tr>
+            
+                      <tr id="productx3">
+                        <td class="p-4">
+                          <div class="media align-items-center">
+                            <img src="./img/3.jpg" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                            <div class="media-body">
+                              <a href="#" class="d-block text-dark" style="text-decoration: none;">Beautiful T-shirt For Women</a>
+                              <small>
+                                <span class="text-muted">Ships from: </span> Germany
+                              </small>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="fprice text-right font-weight-semibold align-middle p-4">48.00</td>
+                        <td class="align-middle p-4 text-center">
+                          <input type="number" class="quantity" name="quantity" min="1" max="99" value="1" data-product-id="3">
+                          <input type="hidden" class="price" name="price" value="48">
+                        </td>
+                        <td class="totalx3 total text-right font-weight-semibold align-middle p-4" data-total-id="3">48.00</td>
+                        <td class="remove3 text-center align-middle px-0"><a href="#" id="x3" class="shop-tooltip close float-none text-danger" title="" data-product-remove="remove3">×</a></td>
+                      </tr>
+                      <tr id="productx4">
+                        <td class="p-4">
+                          <div class="media align-items-center">
+                            <img src="./img/4.jpg" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                            <div class="media-body">
+                              <a href="#" class="d-block text-dark" style="text-decoration: none;">Wool Hat For Men</a>
+                              <small>
+                                <span class="text-muted">Ships from: </span> Germany
+                              </small>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="fprice text-right font-weight-semibold align-middle p-4">95.00</td>
+                        <td class="align-middle p-4 text-center">
+                          <input type="number" class="quantity" name="quantity" min="1" max="99" value="1" data-product-id="4" >
+                          <input type="hidden" class="price" name="price" value="95">
+                        </td>
+                        <td class="totalx4 total totalprice text-right font-weight-semibold align-middle p-4" data-total-id="4"><p>95.00</p></td>
+                        <td class="remove4 text-center align-middle px-0"><a href="#" id="x4" class="shop-tooltip close float-none text-danger" title="" data-product-remove="remove4">×</a></td>
+
+                      </tr>
+            
+                    </tbody>
+                  </table>
+                </div>
+                <!-- / Shopping cart table -->
+            
+                <div class="d-flex flex-wrap justify-content-between align-items-center pb-4">
+                  <div class="mt-4">
+                    <label class="text-muted font-weight-normal">Coupan Discount</label>
+                    <input type="text" placeholder="" class="form-control">
+                  </div>
+                  <div class="d-flex">
+                    <div class="text-right mt-4 mr-5">
+                      <label class="text-muted font-weight-normal m-0">Discount</label>
+                      <div class="text-large"><strong>$0</strong></div>
+                    </div>
+                    <div class="text-right mt-4">
+                      <label class="text-muted font-weight-normal m-0">Total Amount</label>
+                      <div id="totalfinal" class="totalamount text-large"><strong>274.00</strong></div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="float-right">
+                <a href="#" class="textcontinue" style="color: #8d8d8d;">Continue shopping</a>
+                  <button type="button" class="btn btn-lg btn-primary mt-2">Checkout</button>
+                </div>
+              </div>
+          </div>
+    </div>
+    <script>
+      $(document).ready(function(){
+               
+  // quantity
+          $('.quantity').change(function(){
+            const productId =$(this).data('product-id');
+            const product = $(`#productx${productId}`);
+            const quantity = $(this).val();
+            const price = product.find('.price').val();
+            const producttotal =$(this).data(`total-id-${productId}`);
+            const total = quantity*price;
+            console.log(total);
+            $(`.totalx${productId}`).text(total);
+            $(`.totalx${productId}`).val(total);
+            const totalPrice = []
+            tempArr = []
+            $.each($("tr"), function( index, value ) {
+              tempArr.push(value.id.replace('productx',''));
+            });
+
+            $.each($(tempArr), function( index, value ) {
+              if(value !== ''){
+              const tempValue = parseFloat($(`.totalx${value}`)[0].innerText)
+              totalPrice.push(tempValue);
+              }
+            });
+            const sum = totalPrice.reduce((sumValue, a) => sumValue + a, 0);
+            $(`.totalamount`).text(sum);
+            $('.totalamount').val(sum)
+            
+      });
+            $("a").click(function(){
+              
+              const element = $(this).find("a")
+              const id = element.prevObject[0].id
+              
+              const totalPrice = []
+            tempArr = []
+            $.each($("tr"), function( index, value ) {
+              tempArr.push(value.id.replace('productx',''));
+            });
+
+            $.each($(tempArr), function( index, value ) {
+              if(value !== ''){
+              const tempValue = parseInt($(`.totalx${value}`)[0].innerText)
+              totalPrice.push(tempValue)
+              }
+            });
+            // subtruction when delete
+            const sum = totalPrice.reduce((sumValue, a) => sumValue + a, 0);
+            const aaa = parseInt($(`.total${id}`)[0].innerText)
+            $(`.totalamount`).text(sum-aaa);
+            $('.totalamount').val(sum-aaa)
+            console.log(sum-aaa);
+
+            $("tr").remove(`#product${id}`);
+      });
+    
+});
+    </script>
+</body>
+</html>
